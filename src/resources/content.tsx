@@ -2,14 +2,13 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Saaketh",
+  lastName: "Kesireddy",
+  name: `Saaketh Kesireddy`,
+  role: "CS Student @ UF",
+  avatar: "/images/avatar.jpeg",
+  email: "saakethr.kesireddy@gmail.com",
+  location: "America/New_York" // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
 };
 
 const newsletter: Newsletter = {
@@ -25,25 +24,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/saakethk",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/saaketh-kesireddy/",
     essential: true,
   },
   {
@@ -60,9 +47,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Research-Centered CS Student</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -76,7 +63,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Saaketh, a student focused on both theoretical and applied aspects of computing.
 </>
   ),
 };
@@ -102,9 +89,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Engineering college student at the University of Florida pursuing a major in computer
+        science and an intended minor in statistics. Completed an extensive number of courses, 
+        which have built my background in Python, C++, and Java. Extensive experience in conducting research projects. 
+        Seeking a internship, part-time job or research assistant role in the realm of computer science, software engineering, or data science.
       </>
     ),
   },
@@ -113,41 +101,35 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "University of Florida | ENGRAFT Lab",
+        timeframe: "Jan. 2026 - Present",
+        role: "Undergraduate Research Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Utilizing high performance computing clusters to finetune BERT model.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Developing classification model for bias in clinical notes with F1-score {">"} 0.75.
           </>,
+          <>
+            Building processing pipeline for 400,000+ entries of unstructured text data.
+          </>
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "University of Florida | Virtual Learning Lab",
+        timeframe: "Sep. 2025 - Present",
+        role: "Undergraduate Research Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Building model to assess alignment of word ladder with associated lesson.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Implemented tree-based search for word ladder creation.
+          </>,
+          <>
+            Admitted into Emerging Scholars Program with paper expected Dec. 2026.
           </>,
         ],
         images: [],
@@ -159,73 +141,148 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+        name: "University of Florida",
+        description: <><><b>Major:</b> Computer Science (Expected Graduation May 2029)</>
+         <><br/></>
+         <><b>Relevant Coursework:</b> Discrete Math (Fall 2025), Data Structures & Algorithms (Spring
+2026), Computational Linear Algebra (Spring 2026)</></>,
+      }
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Research Interests",
     skills: [
       {
-        title: "Figma",
+        title: "Explanatory AI",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Interested in integrated gradients, and multimodal attributions in realm of robotics.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "Artificial Intelligence",
+            icon: "ai",
+          },
+          {
+            name: "Integrated Gradients",
+            icon: "ai",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Educational Platform Development",
+        description: (
+          <>Building and developing gamified platforms for engaged learning.</>
+        ),
+        tags: [
+          {
+            name: "Text Mining",
+            icon: "ai",
+          },
+          {
+            name: "Full Stack",
+            icon: "ai",
+          },
+          {
+            name: "Education",
+            icon: "ai",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Electronic Health Record Analysis",
+        description: (
+          <>Building scalable pipelines for natural language processing analysis of Electronic Health Record data.</>
+        ),
+        tags: [
+          {
+            name: "Big Data",
+            icon: "ai",
+          },
+          {
+            name: "Machine Learning",
+            icon: "ai",
+          },
+          {
+            name: "Sequence Models",
+            icon: "ai",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+    ],
+  },
+  interests: {
+    display: true, // set to false to hide this section
+    title: "Skills",
+    skills: [
+      {
+        title: "Data Structures",
+        description: (
+          <>Sufficient knowledge of data structures like trees, maps, ect.</>
+        ),
+        tags: [
+          {
+            name: "AVL Trees",
+            icon: "ai",
+          },
+          {
+            name: "Maps",
+            icon: "ai",
+          },
+          {
+            name: "Stack",
+            icon: "ai",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Machine Learning",
+        description: (
+          <>Sufficient knowledge of building machien learning pipelines for various models.</>
+        ),
+        tags: [
+          {
+            name: "Decision Trees",
+            icon: "ai",
+          },
+          {
+            name: "SVMs",
+            icon: "ai",
+          },
+          {
+            name: "Random Forest",
+            icon: "ai",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        title: "Next.js",
+        title: "Data Analysis",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Sufficient knowledge of data analysis and visualization tools.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Scikit-learn",
+            icon: "ai",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Pandas",
+            icon: "ai",
           },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
         ],
       },
     ],
@@ -243,9 +300,9 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
+  label: "Projects",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Software projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
